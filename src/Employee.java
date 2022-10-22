@@ -53,7 +53,7 @@ public class Employee {
     }
     public double bonus(){
         if(this.getWorkHours()>40){
-            return (getWorkHours()-40)*30*4;
+            return (getWorkHours()-40)*30;
         }
         return 0;
     }
@@ -75,15 +75,15 @@ public class Employee {
     @Override
     public String toString() {
 
-        return "Name: " + name + "\n" +
-                "Salary: " + salary + "\n" +
-                "Work Hours: " + workHours + "\n" +
-                "Hire Year: " + hireYear + "\n" +
+        return "Name: " + getName() + "\n" +
+                "Salary: " + getSalary() + "\n" +
+                "Work Hours: " + getWorkHours() + "\n" +
+                "Hire Year: " + getHireYear() + "\n" +
                 "Tax: " + tax() + "\n" +
                 "Bonus: " + bonus() + "\n" +
                 "Raise: " + raiseSalary() + "\n" +
-                "Total Salary: "+ (this.getSalary()+bonus()+raiseSalary())+ "\n" +
-                "tax and bonus with salary: "+(this.getSalary()+bonus()-tax()+raiseSalary());
+                "tax and bonus with salary: "+(getSalary()+bonus()-tax())+ "\n"+
+                "Total Salary: "+(getSalary()+bonus()-tax()+raiseSalary());
 
 
     }
